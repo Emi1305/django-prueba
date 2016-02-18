@@ -4,3 +4,6 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse('Hello worls. This is the polls index')
+
+def detail(request, question_id):
+    return HttpResponse
