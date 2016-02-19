@@ -1,0 +1,9 @@
+{% if preguntas %}
+    <ul>
+    {% for pregunta in preguntas %}
+        <li><a href="{% url 'polls:detail' pregunta.id %}">{{ pregunta.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
